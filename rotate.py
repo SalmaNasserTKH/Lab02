@@ -34,14 +34,7 @@ goal.x = 3
 goal.y = 3
 
 while not rospy.is_shutdown(): 
-    angle_to_goal = atan2(goal.y, goal.x)
-    # angle_to_goal_degrees = angle_to_goal *180/pi
-    # print("angle to goal: ", angle_to_goal_degrees)
-    abs(angle_to_goal - theta) > 0.1
-    if abs(angle_to_goal - theta) > 0.1: 
-        velocity.angular.z = 0.3
-    else:
-        velocity.angular.z = 0.0
+    
 
 
     pub.publish(velocity)
